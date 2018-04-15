@@ -1,0 +1,124 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="print.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="print.js"></script>
+</head>
+   <body  id="printarea">
+   <div class="noprint" id="noprint">
+   <h4><u>CASH RECEIPT</u></h4>
+   <div class="form-style-3">
+<form>
+<fieldset><legend>office</legend>
+<label for="field1"><span>No: <span class="required">*</span></span><input type="text" class="input-field" id="no" name="field1" value="" /></label>
+<label for="field2"><span>Date: <span class="required">*</span></span><input type="email" class="input-field" id="date" name="field2" value="" /></label>
+<label for="field3"><span>Name:<span class="required">*</span></span><input type="text" class="input-field"id="name" name="field3" value="" /></label>
+<label for="field4"><span>Class:<span class="required">*</span></span><input type="text" class="input-field"  id="class" name="field4" value="" /></label>
+<label for="field5"><span>Div:<span class="required">*</span></span><input type="text" class="input-field" id="div" name="field5" value="" /></label>
+<label for="field6"><span>A/C No:<span class="required">*</span></span><input type="text" class="input-field" id="acno" name="field6" value="" /></label>
+
+</fieldset>
+<fieldset style="width: 700px;"><legend>Fees</legend>
+<label for="field7"><span>Particulars</span><span>RS</span><span>PS</span></label>
+<label for="field7"><span>Admission Fee: <span class="required">*</span></span><input type="text" class="input-field" id="afr" name="field7" value="00" /><input type="text" class="input-field" id="afp" name="field77" value="00" /></label>
+<label for="field7"><span>Establishment Fee: <span class="required">*</span></span><input type="text" class="input-field" id="efr" name="field8" value="00" /><input type="text" class="input-field" id="efp" name="field88" value="00" /></label>
+<label for="field7"><span>Tution Fee: <span class="required">*</span></span><input type="text" class="input-field" id="tfr" name="field9" value="00" /><input type="text" class="input-field" id="tfp" name="field99" value="00" /></label>
+<label for="field7"><span>Vehicle Fee(Month): <span class="required">*</span></span><input type="text" class="input-field" id="vfr" name="field10" value="00" /><input type="text" class="input-field" id="vfp" name="field100" value="00" /></label>
+<label for="field7"><span>Program Fee : <span class="required">*</span></span><input type="text" class="input-field" id="pfr" name="field11" value="00" /><input type="text" class="input-field" id="pfp" name="field111" value="00" /></label>
+<label for="field7"><span>Library and Lab Fee: <span class="required">*</span></span><input type="text" class="input-field" id="llfr" name="field12" value="00" /><input type="text" class="input-field" id="llfp" name="field122" value="00" /></label>
+<label for="field7"><span>SMS Fee: <span class="required">*</span></span><input type="text" class="input-field" id="sfr" name="field13" value="00" /><input type="text" class="input-field" id="sfp" name="field133" value="00" /></label>
+<label for="field7"><span>Stationary and Books Fee: <span class="required">*</span></span><input type="text" class="input-field" id="sbfr" name="field14" value="00" /><input type="text" class="input-field" id="sbfp" name="field144" value="00" /></label>
+<label for="field7"><span>Others: <span class="required">*</span></span><input type="text" class="input-field" id="othersr" name="field15" value="00" /><input type="text" class="input-field" id="othersp" name="field155" value="00" /></label>
+<label for="field7"><span>Total :<span class="required">*</span></span><input type="text" class="input-field" id="totalr" name="field16" value="" onclick="getTotal()" /><input type="text" class="input-field" id="totalp" name="field16" value="" onclick="getTotal()" /></label><input type="button" onclick="getdata()" value="Generate Receipt" />
+
+</fieldset>
+</form>
+</div>
+
+ 
+
+
+</div>
+        
+<div class="print" id="print">
+<span class="no1">No:</span><div class="no" id="no1"></div>
+<span class="date1">Date:</span><div class="date" id="date1"></div>
+<span class="name1">Name:</span><div class="name" id="name1"></div>
+<span class="class1">Class:</span><div class="class" id="class1"></div>
+<span class="acno1">A/C No:</span><div class="acno" id="acno1"></div>
+<table >
+  <tr>
+    <th>SI NO</th>
+    <th>Particulars</th> 
+    <th>RS</th>
+	<th>PS</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td >Admission Fee</td>
+    <td id="tafr"></td>
+	<td id="tafp"></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>EstablishmentFee</td>
+    <td id="tefr"></td>
+	<td id="tefp"></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Tution Fee: </td>
+    <td id="ttfr"></td>
+	<td id="ttfp"></td>
+  </tr>
+   <tr>
+    <td>4</td>
+    <td>Vehicle Fee(Month): </td>
+    <td id="tvfr"></td>
+	<td id="tvfp"></td>
+  </tr>
+   <tr>
+    <td>5</td>
+    <td>Program Fee : </td>
+    <td id="tpfr"></td>
+	<td id="tpfp"></td>
+  </tr>
+   <tr>
+    <td>6</td>
+    <td>Library and Lab Fee:</td>
+    <td id="tllfr"></td>
+	<td id="tllfp"></td>
+  </tr>
+   <tr>
+    <td>7</td>
+    <td>SMS Fee: : </td>
+    <td id="tsfr"></td>
+	<td id="tsfp"></td>
+  </tr>
+   <tr>
+    <td>8</td>
+    <td>Stationary and Books Fee:</td>
+    <td id="tsbfr"></td>
+	<td id="tsbfp"></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Others: </td>
+    <td id="tor"></td>
+	<td id="top"></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Total:</td>
+    <td id="ttr"></td>
+	<td id="ttp"></td>
+  </tr>
+</table>
+<span class="rupees">Rupees:</span><div class="acno" id="rupees"></div><span class="paise">Paise:</span><div class="acno" id="paise"></div>
+<div id="container"></div>
+<div id="container"></div>
+<input type="button" value="Print" class="btn" onclick="PrintDoc()"/>
+</div>
+
+    </body>
+    </html>
